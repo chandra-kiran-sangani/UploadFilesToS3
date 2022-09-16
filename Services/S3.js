@@ -5,6 +5,7 @@ const multer = require('multer');
 exports.s3FileUpload = async (file) => {
     const s3 = new S3();
 
+
     const storage = multer.memoryStorage();
     const fileFilter = (req, file, cb) => {
         const fileType = file.mimetype;
